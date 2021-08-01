@@ -11,11 +11,11 @@ def print_hello():
 
 
 dag = DAG('hello_world',
+          default_args={"retries": 2},
           description='Hello world example',
           schedule_interval='0 12 * * *',
           start_date=datetime(2017, 3, 20),
           catchup=False
-
           )
 
 dummy_operator = DummyOperator(
@@ -39,5 +39,3 @@ multiplyby5_operator = MultiplyBy5Operator(
 dummy_operator >> hello_operator
 
 dummy_operator >> multiplyby5_operator
-
-

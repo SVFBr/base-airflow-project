@@ -27,6 +27,7 @@ logs/
 venv/
 env/
 .DS_Store
+bkp/
 
 
 # Sensitive or high-churn files

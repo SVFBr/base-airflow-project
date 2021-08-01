@@ -1,4 +1,3 @@
-import unittest
 from datetime import datetime
 from unittest.case import TestCase
 
@@ -25,3 +24,4 @@ class TestMultiplyBy5Operator(TestCase):
         ti = TaskInstance(task=task, execution_date=datetime.now())
         result = task.execute(ti.get_template_context())
         self.assertNotEquals(result, 10)
+
